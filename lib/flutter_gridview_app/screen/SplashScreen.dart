@@ -17,7 +17,7 @@ class SplashScreenState extends State<SplashScreen>
   late Animation<double> animation;
 
   startTime() async {
-    var _duration = new Duration(seconds: 3);
+    var _duration = new Duration(seconds: 2);
     return new Timer(_duration, navigationPage);
   }
 
@@ -57,7 +57,7 @@ class SplashScreenState extends State<SplashScreen>
               Padding(
                 padding: EdgeInsets.only(bottom: 30.0),
                 child: new Image.asset(
-                  'assets/images/logos/aiims_logo.jpg',
+                  'assets/images/example.jpg',
                   height: 25.0,
                   fit: BoxFit.scaleDown,
                 ),
@@ -85,6 +85,7 @@ class SplashScreenState extends State<SplashScreen>
               ),
             ],
           ),
+
         ],
       ),
     );

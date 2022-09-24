@@ -9,7 +9,7 @@ void main() => runApp(MaterialApp(
   home: SplashScreen(),
   debugShowCheckedModeBanner: false,
   theme: ThemeData(
-    primarySwatch: Colors.red,
+    primarySwatch: Colors.blueGrey,
     accentColor: Color(0xFF761322),
   ),
   routes: <String, WidgetBuilder>{

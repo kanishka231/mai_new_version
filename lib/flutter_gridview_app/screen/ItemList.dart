@@ -20,7 +20,7 @@ class ItemList extends StatelessWidget {
         );
       },
       child: Card(
-        //color: Colors.teal,
+        color: Color(0xFF849AA3),
         elevation: 5.0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
@@ -28,12 +28,12 @@ class ItemList extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            AspectRatio(
-              aspectRatio: 18.0 / 12.0,
-              child: Image.asset(
-                item.trailerImg1,
-                //fit: BoxFit.cover,
-              ),
+            Container(
+              //color: Colors.cyan,
+              padding: EdgeInsets.fromLTRB(15,20,15,15),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: Image.asset(item.trailerImg1)),
             ),
             new Padding(
               padding: EdgeInsets.fromLTRB(4.0, 0.0, 4.0, 2.0),
@@ -42,19 +42,14 @@ class ItemList extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     item.name,
-                    //selectionColor: Colors.blue,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     style: TextStyle(
-                      fontSize: 19.0,
+                      fontSize: 22.0,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
-                  SizedBox(height: 0.0),
-                  SizedBox(height: 2.0),
-
                 ],
               ),
             ),

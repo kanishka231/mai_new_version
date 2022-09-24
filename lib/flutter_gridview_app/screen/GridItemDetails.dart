@@ -14,14 +14,12 @@ class GridItemDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text(item.name),
       ),
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(0xFF5E7A86),
       body: ListView(
         children: <Widget>[
           HeaderBanner(this.item),
-          //GetTags(),
           Container(
-            padding: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 20.0),
-
+            padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 20.0),
           ),
           InkWell(
             onTap: () => {},
@@ -54,74 +52,7 @@ class GridItemDetails extends StatelessWidget {
   }
 }
 
-class GetTags extends StatelessWidget {
-  GetTags();
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 10.0),
-      height: 35.0,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          InkWell(
-            onTap: () => {},
-            child: Container(
-              width: 100.0,
-              height: 35.0,
-              margin: EdgeInsets.only(
-                left: 5.0,
-                right: 5.0,
-              ),
-              decoration: BoxDecoration(
-                color: Color(0xFF761322),
-                border: Border.all(color: Colors.black, width: 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-
-            ),
-          ),
-          InkWell(
-            onTap: () => {},
-            child: Container(
-              width: 100.0,
-              height: 35.0,
-              margin: EdgeInsets.only(
-                left: 5.0,
-                right: 5.0,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.black12,
-                border: Border.all(color: Colors.black, width: 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-
-            ),
-          ),
-          InkWell(
-            onTap: () => {},
-            child: Container(
-              width: 100.0,
-              height: 35.0,
-              margin: EdgeInsets.only(
-                left: 5.0,
-                right: 5.0,
-              ),
-              decoration: BoxDecoration(
-                color: Color(0xFF761322),
-                border: Border.all(color: Colors.white, width: 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class SetTagsItem extends StatelessWidget {
   final String tag;
@@ -230,8 +161,6 @@ class HeaderContent extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
                     ],
                   ),
                 ),
@@ -240,36 +169,6 @@ class HeaderContent extends StatelessWidget {
           ),
           //child:
         ),
-      ),
-    );
-  }
-}
-
-class GetTrailers extends StatelessWidget {
-  final Item item;
-
-  GetTrailers(this.item);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 10.0),
-      height: 100.0,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          Container(
-
-          ),
-          Container(
-            padding: const EdgeInsets.only(left: 5.0),
-
-          ),
-          Container(
-            padding: const EdgeInsets.only(left: 5.0),
-
-          ),
-        ],
       ),
     );
   }
