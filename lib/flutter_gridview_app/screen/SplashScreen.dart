@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mai/flutter_gridview_app/constant/Constant.dart';
+
+import '../constant/Constant.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -56,7 +57,7 @@ class SplashScreenState extends State<SplashScreen>
               Padding(
                 padding: EdgeInsets.only(bottom: 30.0),
                 child: new Image.asset(
-                  'assets/images/powered_by.png',
+                  'assets/images/example.jpg',
                   height: 25.0,
                   fit: BoxFit.scaleDown,
                 ),
@@ -67,7 +68,7 @@ class SplashScreenState extends State<SplashScreen>
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Image.asset(
-                'assets/images/logo.png',
+                'assets/images/example.jpg',
                 width: animation.value * 250,
                 height: animation.value * 250,
               ),

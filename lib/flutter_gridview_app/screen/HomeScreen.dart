@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mai/flutter_gridview_app/model/Item.dart';
-import 'package:mai/flutter_gridview_app/screen/ItemList.dart';
+import '../model/Item.dart';
+import 'ItemList.dart';
 
 class HomeScreen extends StatelessWidget {
   late List<Item> itemList;
@@ -22,11 +22,8 @@ class HomeScreen extends StatelessWidget {
       crossAxisCount: 2,
       padding: EdgeInsets.all(4.0),
       childAspectRatio: 8.0 / 9.0,
-      children: itemList
-          .map(
-            (Item) => ItemList(item: Item),
-      )
-          .toList(),
+      children: itemList.map((Item) => ItemList(item: Item),
+      ).toList(),
     );
   }
 
@@ -49,11 +46,11 @@ class HomeScreen extends StatelessWidget {
         releaseDate: '27 April 2018',
         releaseDateDesc: 'USA (2018), 2h 29min',
         runtime: '2h 29min',
-        bannerUrl: 'assets/images/movie_banner_1.png',
-        imageUrl: 'assets/images/ic_preview_1.png',
-        trailerImg1: 'assets/images/ic_thumb_11.png',
-        trailerImg2: 'assets/images/ic_thumb_12.png',
-        trailerImg3: 'assets/images/ic_thumb_13.png',
+        bannerUrl: 'assets/images/example.jpg',
+        imageUrl: 'assets/images/example.jpg',
+        trailerImg1: 'assets/images/example.jpg',
+        trailerImg2: 'assets/images/example.jpg',
+        trailerImg3: 'assets/images/example.jpg',
       ),
       Item(
         id: 1,
@@ -68,11 +65,11 @@ class HomeScreen extends StatelessWidget {
         releaseDate: '21 June 2017',
         releaseDateDesc: 'USA (2017), 2h 34min',
         runtime: '2h 34min',
-        bannerUrl: 'assets/images/movie_banner_2.png',
-        imageUrl: 'assets/images/ic_preview_2.png',
-        trailerImg1: 'assets/images/ic_thumb_21.png',
-        trailerImg2: 'assets/images/ic_thumb_21.png',
-        trailerImg3: 'assets/images/ic_thumb_21.png',
+        bannerUrl: 'assets/images/example.jpg',
+        imageUrl: 'assets/images/example.jpg',
+        trailerImg1: 'assets/images/example.jpg',
+        trailerImg2: 'assets/images/example.jpg',
+        trailerImg3: 'assets/images/example.jpg',
       ),
       Item(
         id: 2,
@@ -86,11 +83,11 @@ class HomeScreen extends StatelessWidget {
         releaseDate: '23 March 2018',
         releaseDateDesc: 'USA (2018), 1h 51min',
         runtime: '1h 51min',
-        bannerUrl: 'assets/images/movie_banner_3.png',
-        imageUrl: 'assets/images/ic_preview_3.png',
-        trailerImg1: 'assets/images/ic_thumb_31.png',
-        trailerImg2: 'assets/images/ic_thumb_31.png',
-        trailerImg3: 'assets/images/ic_thumb_31.png',
+        bannerUrl: 'assets/images/example.jpg',
+        imageUrl: 'assets/images/example.jpg',
+        trailerImg1: 'assets/images/example.jpg',
+        trailerImg2: 'assets/images/example.jpg',
+        trailerImg3: 'assets/images/example.jpg',
       ),
       Item(
         id: 3,
@@ -105,11 +102,11 @@ class HomeScreen extends StatelessWidget {
         releaseDate: '3 November 2017',
         releaseDateDesc: 'USA (2017), 2h 10min',
         runtime: '2h 10min',
-        bannerUrl: 'assets/images/movie_banner_4.png',
-        imageUrl: 'assets/images/ic_preview_4.png',
-        trailerImg1: 'assets/images/ic_thumb_41.png',
-        trailerImg2: 'assets/images/ic_thumb_41.png',
-        trailerImg3: 'assets/images/ic_thumb_41.png',
+        bannerUrl: 'assets/images/example.jpg',
+        imageUrl: 'assets/images/example.jpg',
+        trailerImg1: 'assets/images/example.jpg',
+        trailerImg2: 'assets/images/example.jpg',
+        trailerImg3: 'assets/images/example.jpg',
       ),
     ];
   }
