@@ -57,18 +57,29 @@ class SplashScreenState extends State<SplashScreen>
               Padding(
                 padding: EdgeInsets.only(bottom: 30.0),
                 child: new Image.asset(
-                  'assets/images/example.jpg',
+                  'assets/images/logos/aiims_logo.jpg',
                   height: 25.0,
                   fit: BoxFit.scaleDown,
                 ),
               )
             ],
           ),
+
           new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Image.asset(
-                'assets/images/example.jpg',
+                'assets/images/logos/aiims_logo.jpg',
+                width: animation.value * 250,
+                height: animation.value * 250,
+              ),
+            ],
+          ),
+          new Column(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Image.asset(
+                'assets/images/logos/ministry_logo.jpg',
                 width: animation.value * 250,
                 height: animation.value * 250,
               ),
