@@ -20,7 +20,8 @@ class ItemList extends StatelessWidget {
         );
       },
       child: Card(
-        elevation: 1.0,
+        //color: Colors.teal,
+        elevation: 5.0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
@@ -31,7 +32,7 @@ class ItemList extends StatelessWidget {
               aspectRatio: 18.0 / 12.0,
               child: Image.asset(
                 item.trailerImg1,
-                fit: BoxFit.cover,
+                //fit: BoxFit.cover,
               ),
             ),
             new Padding(
@@ -41,189 +42,28 @@ class ItemList extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     item.name,
+                    //selectionColor: Colors.blue,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     style: TextStyle(
-                      fontSize: 12.0,
-                      color: Color(0xFFD73C29),
+                      fontSize: 19.0,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
-                    item.category,
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: 9.0,
-                    ),
-                  ),
+
                   SizedBox(height: 0.0),
-                  GetRatings(),
                   SizedBox(height: 2.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(right: 4.0),
-                        child: Column(
-                          children: <Widget>[
-                            Text(
-                              'RELEASE DATE:',
-                              style: TextStyle(
-                                color: Colors.black38,
-                                fontSize: 9.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              item.releaseDate,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 9.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 4.0),
-                        child: Column(
-                          children: <Widget>[
-                            Text(
-                              'RUNTIME:',
-                              style: TextStyle(
-                                color: Colors.black38,
-                                fontSize: 9.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              item.runtime,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 9.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+
                 ],
               ),
             ),
           ],
         ),
       ),
+
     );
   }
 }
 
-class HeaderContent extends StatelessWidget {
-  final Item item;
 
-  HeaderContent(this.item);
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomLeft,
-      child: Container(
-        alignment: Alignment.center,
-        margin: EdgeInsets.only(left: 10.0, top: 5.0, right: 10.0),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    item.name,
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      color: Color(0xFFD73C29),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    item.category,
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: 9.0,
-                    ),
-                  ),
-                  GetRatings(),
-                  MovieDesc(this.item),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class MovieDesc extends StatelessWidget {
-  final Item item;
-
-  MovieDesc(this.item);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            child: Column(
-              children: <Widget>[
-                Text(
-                  'RELEASE DATE:',
-                  style: TextStyle(
-                    color: Colors.black38,
-                    fontSize: 9.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  item.releaseDate,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 9.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-            child: Column(
-              children: <Widget>[
-                Text(
-                  'RUNTIME:',
-                  style: TextStyle(
-                    color: Colors.black38,
-                    fontSize: 9.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  item.runtime,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 9.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

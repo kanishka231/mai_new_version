@@ -14,20 +14,14 @@ class GridItemDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text(item.name),
       ),
-      backgroundColor: Color(0xFF761322),
+      backgroundColor: Colors.blueAccent,
       body: ListView(
         children: <Widget>[
           HeaderBanner(this.item),
-          GetTags(),
+          //GetTags(),
           Container(
             padding: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 20.0),
-            child: Text(
-              item.desc,
-              style: TextStyle(
-                fontSize: 13.0,
-                color: Colors.white,
-              ),
-            ),
+
           ),
           InkWell(
             onTap: () => {},
@@ -44,24 +38,14 @@ class GridItemDetails extends StatelessWidget {
                   'Watch Movies',
                   style: TextStyle(
                     fontSize: 18.0,
-                    color: Color(0xFF761322),
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 10.0),
-            child: Text(
-              'Trailers',
-              style: TextStyle(
-                fontSize: 16.0,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          GetTrailers(this.item),
+
         ],
         // ),
         //],
@@ -93,15 +77,27 @@ class GetTags extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 color: Color(0xFF761322),
-                border: Border.all(color: Colors.white, width: 1.0),
+                border: Border.all(color: Colors.black, width: 1.0),
                 borderRadius: BorderRadius.circular(30.0),
               ),
-              child: Center(
-                child: Text(
-                  'Action',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-                ),
+
+            ),
+          ),
+          InkWell(
+            onTap: () => {},
+            child: Container(
+              width: 100.0,
+              height: 35.0,
+              margin: EdgeInsets.only(
+                left: 5.0,
+                right: 5.0,
               ),
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                border: Border.all(color: Colors.black, width: 1.0),
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+
             ),
           ),
           InkWell(
@@ -118,34 +114,7 @@ class GetTags extends StatelessWidget {
                 border: Border.all(color: Colors.white, width: 1.0),
                 borderRadius: BorderRadius.circular(30.0),
               ),
-              child: Center(
-                child: Text(
-                  'Adventure',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-                ),
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: () => {},
-            child: Container(
-              width: 100.0,
-              height: 35.0,
-              margin: EdgeInsets.only(
-                left: 5.0,
-                right: 5.0,
-              ),
-              decoration: BoxDecoration(
-                color: Color(0xFF761322),
-                border: Border.all(color: Colors.white, width: 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              child: Center(
-                child: Text(
-                  'Fantasy',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-                ),
-              ),
+
             ),
           ),
         ],
@@ -256,32 +225,13 @@ class HeaderContent extends StatelessWidget {
                           maxLines: 1,
                           style: TextStyle(
                             fontSize: 26.0,
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      GetRatings(),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
-                        child: Text(
-                          item.directors,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        //margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
-                        child: Text(
-                          item.releaseDateDesc,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      ),
+
+
                     ],
                   ),
                 ),
@@ -309,30 +259,15 @@ class GetTrailers extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Container(
-            child: Image.asset(
-              item.trailerImg1,
-              width: 160.0,
-              height: 100.0,
-              fit: BoxFit.cover,
-            ),
+
           ),
           Container(
             padding: const EdgeInsets.only(left: 5.0),
-            child: Image.asset(
-              item.trailerImg2,
-              width: 160.0,
-              height: 100.0,
-              fit: BoxFit.cover,
-            ),
+
           ),
           Container(
             padding: const EdgeInsets.only(left: 5.0),
-            child: Image.asset(
-              item.trailerImg3,
-              width: 160.0,
-              height: 100.0,
-              fit: BoxFit.cover,
-            ),
+
           ),
         ],
       ),
