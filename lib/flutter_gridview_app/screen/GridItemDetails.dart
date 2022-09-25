@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mai/flutter_gridview_app/model/Item.dart';
 import 'package:mai/flutter_gridview_app/screen/GetRatings.dart';
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 
 class GridItemDetails extends StatelessWidget {
   final Item item;
@@ -9,78 +12,125 @@ class GridItemDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       primary: true,
       appBar: AppBar(
         title: Text(item.name),
       ),
       backgroundColor: Color(0xFF5E7A86),
+      resizeToAvoidBottomInset: false,
       body: ListView(
         children: <Widget>[
           HeaderBanner(this.item),
-          Container(
-            padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 20.0),
-          ),
+
           InkWell(
             onTap: () => {},
             child: Container(
               margin: EdgeInsets.fromLTRB(50.0, 5.0, 50.0, 5.0),
-              width: 80.0,
+              //width: 80.0,
               height: 40.0,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              child: Center(
-                child: Text(
-                  'Watch Movies',
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+
+              child: Container(
+                child: video()
               ),
             ),
           ),
 
         ],
+
         // ),
         //],
       ),
     );
   }
 }
+class video extends StatefulWidget{
+  @override
+  _videoState createState() => _videoState();
+}
+class _videoState extends State<video> {
 
+  late VideoPlayerController controller;
 
+  @override
+  void initState() {
+    loadVideoPlayer();
+    super.initState();
+  }
 
-class SetTagsItem extends StatelessWidget {
-  final String tag;
+  loadVideoPlayer(){
+    controller = VideoPlayerController.asset('assets/dogs.mp4');
+    controller.addListener(() {
+      setState(() {});
+    });
+    controller.initialize().then((value){
+      setState(() {});
+    });
 
-  SetTagsItem(this.tag);
+  }
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => {},
-      child: Container(
-        width: 100.0,
-        height: 35.0,
-        margin: EdgeInsets.only(
-          left: 5.0,
-          right: 5.0,
-        ),
-        decoration: BoxDecoration(
-          color: Color(0xFF761322),
-          border: Border.all(color: Colors.white, width: 1.0),
-          borderRadius: BorderRadius.circular(30.0),
-        ),
-        child: Center(
-          child: Text(
-            tag,
-            style: TextStyle(fontSize: 16.0, color: Colors.white),
-          ),
-        ),
+    return  Scaffold(
+
+      body: Container(
+          child: Column(
+              children:[
+                AspectRatio(
+                  aspectRatio: controller.value.aspectRatio,
+                  child: VideoPlayer(controller),
+                ),
+
+                Container( //duration of video
+                  child: Text("Total Duration: " + controller.value.duration.toString()),
+                ),
+
+                Container(
+                    child: VideoProgressIndicator(
+                        controller,
+                        allowScrubbing: true,
+                        colors:VideoProgressColors(
+                          backgroundColor: Colors.redAccent,
+                          playedColor: Colors.green,
+                          bufferedColor: Colors.purple,
+                        )
+                    )
+                ),
+
+                Container(
+                  child: Row(
+                    children: [
+                      IconButton(
+                          onPressed: (){
+                            if(controller.value.isPlaying){
+                              controller.pause();
+                            }else{
+                              controller.play();
+                            }
+
+                            setState(() {
+
+                            });
+                          },
+                          icon:Icon(controller.value.isPlaying?Icons.pause:Icons.play_arrow)
+                      ),
+
+                      IconButton(
+                          onPressed: (){
+                            controller.seekTo(Duration(seconds: 0));
+
+                            setState(() {
+
+                            });
+                          },
+                          icon:Icon(Icons.stop)
+                      )
+                    ],
+                  ),
+                )
+              ]
+          )
       ),
     );
   }
@@ -96,12 +146,11 @@ class HeaderBanner extends StatelessWidget {
     return Material(
       elevation: 0.0,
       child: Container(
-        height: 380.0,
+        height: 200,
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
             HeaderImage(this.item.bannerUrl),
-            HeaderContent(this.item),
           ],
         ),
       ),
@@ -118,58 +167,11 @@ class HeaderImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
       bannerUrl,
-      width: 600.0,
-      height: 380.0,
-      fit: BoxFit.cover,
+      //width: 300,
+      height: 300,
+      //fit: BoxFit.cover,
     );
   }
 }
 
-class HeaderContent extends StatelessWidget {
-  final Item item;
 
-  HeaderContent(this.item);
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomLeft,
-      child: Container(
-        //color: Colors.black.withOpacity(0.1),
-        constraints: BoxConstraints.expand(
-          height: 110.0,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
-          child: Container(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.only(bottom: 1.0),
-                        child: Text(
-                          item.name,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: TextStyle(
-                            fontSize: 26.0,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          //child:
-        ),
-      ),
-    );
-  }
-}
