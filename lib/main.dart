@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'flutter_gridview_app/constant/Constant.dart';
-import 'flutter_gridview_app/screen/GridItemDetails.dart';
 import 'flutter_gridview_app/screen/HomeScreen.dart';
 import 'flutter_gridview_app/screen/SplashScreen.dart';
 
