@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mai/home.dart';
@@ -46,6 +45,7 @@ class _new_fState extends State<new_f> {
               ),
               elevation: 5,
               margin: EdgeInsets.all(10),
+
             ),
             GestureDetector (
               child: Card(

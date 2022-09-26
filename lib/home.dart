@@ -14,7 +14,7 @@ class HomeScreen_1 extends StatelessWidget {
             color: Color(0xFF5E7A86),
             child: VideoItems(
             videoPlayerController: VideoPlayerController.asset(
-              'assets/videos/exa.mp4',
+              'assets/videos/intro.mp4',
             ),
             looping: true,
             autoplay: false,
