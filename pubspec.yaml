@@ -29,7 +29,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1cd7332cf7b995730ce6fc21ca646dacd7c7e303
   video_player: ^2.4.7
 
 
@@ -65,6 +68,9 @@ flutter:
   assets:
     - assets/images/logos/
     - assets/
+     - assets/images/logos/
+     - assets/images/
+     - assets/videos/intro.mp4
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
