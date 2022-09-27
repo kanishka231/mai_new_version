@@ -1,14 +1,11 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 class logo_page extends StatefulWidget {
   logo_page({Key? key}) : super(key: key);
   @override
   _logo_pageState createState() => _logo_pageState();
 }
-
 class _logo_pageState extends State<logo_page> {
   @override
   Widget build(BuildContext context) {

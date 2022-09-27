@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-
 import 'video.dart';
 
 
@@ -10,6 +9,10 @@ class HomeScreen_1 extends StatelessWidget {
     return Scaffold(
      body: ListView(
         children: <Widget>[
+          Text(
+            'Video',
+            style: TextStyle(fontSize: 30,color: Colors.white),
+          ),
           Container(
             color: Color(0xFF5E7A86),
             child: VideoItems(
@@ -21,10 +24,6 @@ class HomeScreen_1 extends StatelessWidget {
           ),
 
           )
-
-
-
-
         ],
       ),
     );
