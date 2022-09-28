@@ -50,20 +50,20 @@ class SplashScreenState extends State<SplashScreen>
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          new Column(
+          /*new Column(
             mainAxisAlignment: MainAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(bottom: 30.0),
                 child: new Image.asset(
-                  'assets/images/example.jpg',
+                  'assets/images/imp_pics/1_intro_ss.jpg',
                   height: 25.0,
                   fit: BoxFit.scaleDown,
                 ),
               )
             ],
-          ),
+          ),*/
 
           new Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -75,7 +75,7 @@ class SplashScreenState extends State<SplashScreen>
               ),
             ],
           ),
-          new Column(
+          /*new Column(
             //mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Image.asset(
@@ -84,7 +84,7 @@ class SplashScreenState extends State<SplashScreen>
                 height: animation.value * 250,
               ),
             ],
-          ),
+          ),*/
 
         ],
       ),

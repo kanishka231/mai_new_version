@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:mai/flutter_gridview_app/screen/menu_bar.dart';
 
 import 'khandA.dart';
@@ -42,12 +43,20 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text("Maai"),
         ),
         body: GridView(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: SliverQuiltedGridDelegate(
               crossAxisCount: 2,
               crossAxisSpacing: 5,
-              mainAxisSpacing: 1,
-              mainAxisExtent: 220,
-              childAspectRatio: 1
+              mainAxisSpacing: 7,
+            pattern: [
+              QuiltedGridTile(2, 2),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(2, 2),
+            ],
           ),
           children: [
             GestureDetector (
@@ -57,13 +66,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('KHAND A',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('KHAND A',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),
+                    ),
 
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/example.jpg')),
+                          child: Image.asset('assets/images/imp_pics/1_intro_ss.jpg')),
                     ),
                   ],
                 ),
@@ -94,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: EdgeInsets.fromLTRB(15,20,15,15),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/example.jpg')),
+                        child: Image.asset('assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
                   ),
                 ],
               ),
@@ -148,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: EdgeInsets.fromLTRB(15,20,15,15),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/example.jpg')),
+                        child: Image.asset('assets/images/imp_pics/4_maa_ka_dudh.jpg')),
                   ),
                 ],
               ),
@@ -170,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: EdgeInsets.fromLTRB(15,20,15,15),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/example.jpg')),
+                        child: Image.asset('assets/images/imp_pics/5_navjaat_dekhbhal.jpg')),
                   ),
                 ],
               ),
@@ -208,6 +218,29 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 children: <Widget>[
                   Text('KHAND G',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(15,20,15,15),
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: Image.asset('assets/images/example.jpg')),
+                  ),
+
+                ],
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 5,
+              margin: EdgeInsets.all(10),
+
+            ),
+            Card(
+              color: Color(0xFF5510A1),
+              semanticContainer: true,
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              child: Column(
+                children: <Widget>[
+                  Text('Video Rahega yaha pe',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
                   Container(
                     padding: EdgeInsets.fromLTRB(15,20,15,15),
                     child: ClipRRect(

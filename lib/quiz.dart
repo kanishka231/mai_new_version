@@ -49,8 +49,7 @@ class HomePage extends StatelessWidget {
                     textStyle:
                     const TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.red,)),
                 child: const Text('Start Quiz'),
-              ),
-            ],
+              ),            ],
           ),
         ),
       ),
