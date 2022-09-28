@@ -32,10 +32,7 @@ class HomePage extends StatelessWidget {
                   color: Colors.brown.shade900,
                 ),
               ),
-              RaisedButton(
-                padding: EdgeInsets.all(15.0),
-                elevation: 5.0,
-                color: Colors.lightGreen.shade200,
+              ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -44,11 +41,15 @@ class HomePage extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text(
-                  'Start Quiz',
-                  style: TextStyle(fontSize: 40.0, color: Colors.red),
-                ),
-              )
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.lightGreen.shade200,
+                    //onPrimary: Colors.white,
+                    padding: EdgeInsets.all(15.0),
+                    elevation: 5.0,
+                    textStyle:
+                    const TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.red,)),
+                child: const Text('Start Quiz'),
+              ),
             ],
           ),
         ),
@@ -182,38 +183,37 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.green,
-              child: Text(
-                'True',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                ),
-              ),
+            child: ElevatedButton(
               onPressed: () {
                 checkAnswer(context, true);
               },
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.green,
+                  onPrimary: Colors.white,
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                  textStyle:
+                  const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white,)),
+              child: const Text('True'),
             ),
           ),
         ),
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              color: Colors.red,
-              child: Text(
-                'False',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
-                ),
-              ),
+            child: ElevatedButton(
               onPressed: () {
                 checkAnswer(context, false);
-              },
+                },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                  textStyle:
+                  const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white,)),
+              child: const Text('False'),
             ),
+
           ),
         ),
         Expanded(
