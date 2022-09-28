@@ -9,15 +9,15 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Audio()
+        home: Audio_A()
     );
   }
 }
-class Audio extends  StatefulWidget {
+class Audio_A extends  StatefulWidget {
   @override
-  State<Audio> createState() => _AudioState();
+  State<Audio_A> createState() => _Audio_AState();
 }
-class _AudioState extends State<Audio> {
+class _Audio_AState extends State<Audio_A> {
 
   int maxduration = 100;
   int currentpos = 0;

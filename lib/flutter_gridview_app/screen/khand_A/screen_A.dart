@@ -1,10 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mai/quiz.dart';
+import 'package:mai/flutter_gridview_app/screen/khand_A/quiz_A.dart';
 import 'package:video_player/video_player.dart';
-import '../../audio.dart';
-import '../../video.dart';
+import '../../../video.dart';
+import 'audio_A.dart';
 
 class khand_A extends StatefulWidget {
   khand_A({Key? key}) : super(key: key);
@@ -65,14 +65,14 @@ class _khand_AState extends State<khand_A> {
                     height: 250,
                     width: 400,
                     //color: Color(0x6E2B70FF),
-                    child: Audio(),
+                    child: Audio_A(),
                     ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 300,
                     //width: 400,
                     //color: Color(0x6E2B70FF),
-                    child: HomePage(),
+                    child: HomePage_1(),
 
                   ),
                 ],

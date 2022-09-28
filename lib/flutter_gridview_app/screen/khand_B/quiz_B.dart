@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:mai/flutter_gridview_app/screen/khand_B/quiz_brain_B.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-import 'quiz_brain.dart';
 
-QuizBrain quizBrain = QuizBrain();
 
-class HomePage extends StatelessWidget {
+QuizBrain_B quizBrain = QuizBrain_B();
+
+class HomePage_2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

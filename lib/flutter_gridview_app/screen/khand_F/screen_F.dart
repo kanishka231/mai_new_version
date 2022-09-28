@@ -1,23 +1,23 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mai/quiz.dart';
+import 'package:mai/flutter_gridview_app/screen/khand_F/audio_F.dart';
+import 'package:mai/flutter_gridview_app/screen/khand_F/quiz_F.dart';
+import 'package:mai/flutter_gridview_app/screen/khand_F/video_F.dart';
 import 'package:video_player/video_player.dart';
-import '../../audio.dart';
-import '../../video.dart';
 
-class khand_B extends StatefulWidget {
-  khand_B({Key? key}) : super(key: key);
+class khand_F extends StatefulWidget {
+  khand_F({Key? key}) : super(key: key);
 
   @override
-  _khand_BState createState() => _khand_BState();
+  _khand_FState createState() => _khand_FState();
 }
-class _khand_BState extends State<khand_B> {
+class _khand_FState extends State<khand_F> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Khand B"),
+          title: Text("Khand F"),
         ),
         body: ListView(
           children: [
@@ -36,7 +36,7 @@ class _khand_BState extends State<khand_B> {
                     //color: Color(0x6E2B70FF),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/imp_pics/4_maa_ka_dudh.jpg')),
+                        child: Image.asset('assets/images/imp_pics/8_tikaakaran.jpg')),
                   ),
                   Text(
                     'Video',
@@ -48,7 +48,7 @@ class _khand_BState extends State<khand_B> {
                     height: 400,
                     width: 400,
                     //color: Color(0x6E2BFF3D),
-                    child: VideoItems(
+                    child: VideoItems_F(
                       videoPlayerController: VideoPlayerController.asset(
                         'assets/videos/intro.mp4',
                       ),
@@ -65,14 +65,14 @@ class _khand_BState extends State<khand_B> {
                     height: 250,
                     width: 400,
                     //color: Color(0x6E2B70FF),
-                    child: Audio(),
+                    child: Audio_F(),
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 300,
                     //width: 400,
                     //color: Color(0x6E2B70FF),
-                    child: HomePage(),
+                    child: HomePage_6(),
 
                   ),
                 ],

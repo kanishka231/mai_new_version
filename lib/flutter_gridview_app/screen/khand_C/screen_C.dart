@@ -1,10 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mai/quiz.dart';
+import 'package:mai/flutter_gridview_app/screen/khand_C/quiz_C.dart';
+import 'package:mai/flutter_gridview_app/screen/khand_C/video_C.dart';
 import 'package:video_player/video_player.dart';
-import '../../audio.dart';
-import '../../video.dart';
+
+import 'audio_C.dart';
 
 class khand_C extends StatefulWidget {
   khand_C({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _khand_CState extends State<khand_C> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Khand B"),
+          title: Text("Khand C"),
         ),
         body: ListView(
           children: [
@@ -48,7 +49,7 @@ class _khand_CState extends State<khand_C> {
                     height: 400,
                     width: 400,
                     //color: Color(0x6E2BFF3D),
-                    child: VideoItems(
+                    child: VideoItems_C(
                       videoPlayerController: VideoPlayerController.asset(
                         'assets/videos/intro.mp4',
                       ),
@@ -65,14 +66,14 @@ class _khand_CState extends State<khand_C> {
                     height: 250,
                     width: 400,
                     //color: Color(0x6E2B70FF),
-                    child: Audio(),
+                    child: Audio_C(),
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 300,
                     //width: 400,
                     //color: Color(0x6E2B70FF),
-                    child: HomePage(),
+                    child: HomePage_3(),
 
                   ),
                 ],

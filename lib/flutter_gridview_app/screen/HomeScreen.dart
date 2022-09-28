@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:mai/flutter_gridview_app/screen/appeal_video.dart';
 import 'package:mai/flutter_gridview_app/screen/intro_video.dart';
-import 'package:mai/flutter_gridview_app/screen/khandB.dart';
-import 'package:mai/flutter_gridview_app/screen/khandC.dart';
-import 'package:mai/flutter_gridview_app/screen/khandD.dart';
-import 'package:mai/flutter_gridview_app/screen/khandE.dart';
-import 'package:mai/flutter_gridview_app/screen/khandF.dart';
 import 'package:mai/flutter_gridview_app/screen/menu_bar.dart';
 
-import 'khandA.dart';
+import 'khand_A/screen_A.dart';
+import 'khand_B/screen_B.dart';
+import 'khand_C/screen_C.dart';
+import 'khand_D/screen_D.dart';
+import 'khand_E/screen_E.dart';
+import 'khand_F/screen_F.dart';
 
 void main() {
   runApp(HomeScreen());

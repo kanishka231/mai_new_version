@@ -5,7 +5,7 @@ class Question {
   Question(this.qText, this.qAns);
 }
 
-class QuizBrain {
+class QuizBrain_B{
   int _qNo = 0;
 
   List<Question> _questions = [
