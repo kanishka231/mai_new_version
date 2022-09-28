@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text(
-                'Let\'s check your awareness on COVID-19 precautionary measures?',
+                ' खंड अ : प्रसब  पूर्व जाँच',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 15,
