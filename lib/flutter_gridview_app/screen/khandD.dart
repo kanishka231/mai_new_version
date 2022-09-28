@@ -6,18 +6,18 @@ import 'package:video_player/video_player.dart';
 import '../../audio.dart';
 import '../../video.dart';
 
-class khand_A extends StatefulWidget {
-  khand_A({Key? key}) : super(key: key);
+class khand_D extends StatefulWidget {
+  khand_D({Key? key}) : super(key: key);
 
   @override
-  _khand_AState createState() => _khand_AState();
+  _khand_DState createState() => _khand_DState();
 }
-class _khand_AState extends State<khand_A> {
+class _khand_DState extends State<khand_D> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Khand A"),
+          title: Text("Khand B"),
         ),
         body: ListView(
           children: [
@@ -36,7 +36,7 @@ class _khand_AState extends State<khand_A> {
                     //color: Color(0x6E2B70FF),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
+                        child: Image.asset('assets/images/imp_pics/6_maa_ki_dekhbhal.jpg')),
                   ),
                   Text(
                     'Video',
@@ -47,7 +47,7 @@ class _khand_AState extends State<khand_A> {
                     //padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 400,
                     width: 400,
-                      //color: Color(0x6E2BFF3D),
+                    //color: Color(0x6E2BFF3D),
                     child: VideoItems(
                       videoPlayerController: VideoPlayerController.asset(
                         'assets/videos/intro.mp4',
@@ -66,7 +66,7 @@ class _khand_AState extends State<khand_A> {
                     width: 400,
                     //color: Color(0x6E2B70FF),
                     child: Audio(),
-                    ),
+                  ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 300,

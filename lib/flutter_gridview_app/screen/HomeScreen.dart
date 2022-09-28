@@ -2,6 +2,13 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:mai/flutter_gridview_app/screen/appeal_video.dart';
+import 'package:mai/flutter_gridview_app/screen/intro_video.dart';
+import 'package:mai/flutter_gridview_app/screen/khandB.dart';
+import 'package:mai/flutter_gridview_app/screen/khandC.dart';
+import 'package:mai/flutter_gridview_app/screen/khandD.dart';
+import 'package:mai/flutter_gridview_app/screen/khandE.dart';
+import 'package:mai/flutter_gridview_app/screen/khandF.dart';
 import 'package:mai/flutter_gridview_app/screen/menu_bar.dart';
 
 import 'khandA.dart';
@@ -44,9 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: GridView(
           gridDelegate: SliverQuiltedGridDelegate(
-              crossAxisCount: 2,
-              crossAxisSpacing: 5,
-              mainAxisSpacing: 7,
+            crossAxisCount: 2,
+            crossAxisSpacing: 5,
+            mainAxisSpacing: 7,
             pattern: [
               QuiltedGridTile(2, 2),
               QuiltedGridTile(1, 1),
@@ -66,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('KHAND A',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),
+                    Text('INTRO Video',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),
                     ),
 
                     Container(
@@ -87,175 +94,239 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => new_f(),
+                    builder: (context) => video_intro(),
+                  ),
+                );
+              },
+            ),
+            GestureDetector (
+              child: Card(
+                color: Color(0xFF91D72C),
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  children: <Widget>[
+                    Text('खंड A',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.asset('assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
+                    ),
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => khand_A(),
                   ),
                 );
               },
             ),
 
-            Card(
-              color: Color(0xFF91D72C),
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Column(
-                children: <Widget>[
-                  Text('KHAND B',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15,20,15,15),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
-                  ),
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
 
-              /*child: ClipRRect( // Clip it cleanly.
-                  child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
-                    child: Container(
-                      color: Colors.grey.withOpacity(0.1),
-                      alignment: Alignment.center,
-                      child: Text('CHOCOLATE'),
+            GestureDetector (
+              child:
+              Card(
+                color: Color(0xFFB80F03),
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  children: <Widget>[
+                    Text('खंड B',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.asset('assets/images/imp_pics/4_maa_ka_dudh.jpg')),
                     ),
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => khand_B(),
                   ),
-                ),*/
+                );
+              },
+            ),
+            GestureDetector (
+              child:
+              Card(
+                color: Color(0xFF0443A1),
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  children: <Widget>[
+                    Text('खंड C',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.asset('assets/images/imp_pics/5_navjaat_dekhbhal.jpg')),
+                    ),
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => khand_C(),
+                  ),
+                );
+              },
             ),
 
-            Card(
-              color: Color(0xFFB80F03),
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Column(
-                children: <Widget>[
-                  Text('KHAND C',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15,20,15,15),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/example.jpg')),
+            GestureDetector (
+              child: Card(
+                color: Color(0xFFCD600D),
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  children: <Widget>[
+                    Text('खंड D',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.asset('assets/images/imp_pics/6_maa_ki_dekhbhal.jpg')),
+                    ),
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => khand_D(),
                   ),
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
+                );
+              },
             ),
-            Card(
-              color: Color(0xFF0443A1),
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Column(
-                children: <Widget>[
-                  Text('KHAND D',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15,20,15,15),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/imp_pics/4_maa_ka_dudh.jpg')),
+            GestureDetector (
+              child:
+              Card(
+                color: Color(0xFF840678),
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  children: <Widget>[
+                    Text('खंड E',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.asset('assets/images/imp_pics/7_kam_wajan_waale_bachhe.jpg')),
+                    ),
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => khand_E(),
                   ),
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
+                );
+              },
             ),
+            GestureDetector (
+              child:
+              Card(
+                color: Color(0xFF5510A1),
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  children: <Widget>[
+                    Text('खंड F',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.asset('assets/images/imp_pics/8_tikaakaran.jpg')),
+                    ),
 
-            Card(
-              color: Color(0xFFCD600D),
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Column(
-                children: <Widget>[
-                  Text('KHAND E',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15,20,15,15),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/imp_pics/5_navjaat_dekhbhal.jpg')),
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => khand_F(),
                   ),
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
+                );
+              },
             ),
-            Card(
-              color: Color(0xFF840678),
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Column(
-                children: <Widget>[
-                  Text('KHAND F',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15,20,15,15),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/example.jpg')),
+            GestureDetector (
+              child:
+              Card(
+                color: Color(0xFFDE0759),
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  children: <Widget>[
+                    Text('Appeal Video',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.asset('assets/images/imp_pics/9_nivedan.jpg')),
+                    ),
+
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => appeal_video(),
                   ),
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
-            ),
-            Card(
-              color: Color(0xFF5510A1),
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Column(
-                children: <Widget>[
-                  Text('KHAND G',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15,20,15,15),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/example.jpg')),
-                  ),
-
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
-
-            ),
-            Card(
-              color: Color(0xFF5510A1),
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Column(
-                children: <Widget>[
-                  Text('Video Rahega yaha pe',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15,20,15,15),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/example.jpg')),
-                  ),
-
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
-
+                );
+              },
             ),
           ],
           padding: EdgeInsets.all(10),
