@@ -70,6 +70,7 @@ flutter:
     - assets/images/
     - assets/videos/intro.mp4
     - assets/audio/KHAND A(complete audio).mp3
+    - assets/audio/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
