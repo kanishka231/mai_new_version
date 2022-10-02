@@ -22,7 +22,7 @@ class _Audio_BState extends State<Audio_B> {
   int maxduration = 100;
   int currentpos = 0;
   String currentpostlabel = "00:00";
-  String audioasset = "assets/audio/KHAND A(complete audio).mp3";
+  String audioasset = "assets/audio/khand_B(maa_ka_dudh).mp3";
   bool isplaying = false;
   bool audioplayed = false;
   late Uint8List audiobytes;
