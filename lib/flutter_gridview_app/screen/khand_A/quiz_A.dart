@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'quiz_brain_A.dart';
@@ -28,7 +29,11 @@ class HomePage_1 extends StatelessWidget {
                 ' खंड अ : प्रसब  पूर्व जाँच',
                 textAlign: TextAlign.center,
                 style: TextStyle(
+<<<<<<< HEAD
                   fontSize: 20,
+=======
+                  fontSize: 25,
+>>>>>>> b0ebd9b537ced5395ef5b96249b8b0ab46c00352
                   color: Colors.brown.shade900,
                 ),
               ),
@@ -87,8 +92,13 @@ class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
   int countCorrectAns = 0;
   int totalNoOfQuestions = quizBrain.getCountOfQuestions();
+  //WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
 
   void checkAnswer(BuildContext context, bool userAns) {
+    FirebaseFirestore.instance
+        .collection('data')
+        .add({'ans': userAns});
     setState(() {
       if (quizBrain.getAnswer() == userAns) {
         scoreKeeper.add(

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "752475046441",
+    "project_id": "fbtp-94604",
+    "storage_bucket": "fbtp-94604.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752475046441:android:2edff90430284593fe5238",
+        "android_client_info": {
+          "package_name": "com.example.mai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752475046441-i2mhoffvd7qru9i39qvtigjq5roqr8i1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmCSYc5pyx8nhUZssJIQN_G3OcP2WjeQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752475046441-i2mhoffvd7qru9i39qvtigjq5roqr8i1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
