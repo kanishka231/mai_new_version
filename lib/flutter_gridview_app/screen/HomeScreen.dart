@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
 
                   children: <Widget>[
-                    Text('INTRO Video',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),
+                    Text('स्वागत',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),
                     ),
 
                     Container(
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड A',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('खंड A',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
@@ -139,12 +139,12 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xFFB80F03),
+                color: Color(0xFFFD7F00),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड B',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('खंड B',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
@@ -171,12 +171,12 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xFF0443A1),
+                color: Color(0xFFC559C7),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड C',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('खंड C',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
@@ -203,12 +203,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
             GestureDetector (
               child: Card(
-                color: Color(0xFFCD600D),
+                color: Color(0xFFE7C32C),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड D',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('खंड D',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
@@ -235,12 +235,12 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xFF840678),
+                color: Color(0xDF1FE5B1),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड E',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('खंड E',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
@@ -267,12 +267,12 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xFF5510A1),
+                color: Color(0xFF7B5D9F),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड F',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('खंड F',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
@@ -306,7 +306,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('Appeal Video',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('Appeal Video',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(

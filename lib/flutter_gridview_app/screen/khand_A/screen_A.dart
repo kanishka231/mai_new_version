@@ -70,7 +70,7 @@ class _khand_AState extends State<khand_A> {
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 300,
-                    //width: 400,
+                    width: 400,
                     //color: Color(0x6E2B70FF),
                     child: HomePage_1(),
 

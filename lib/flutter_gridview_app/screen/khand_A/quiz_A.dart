@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-
 import 'quiz_brain_A.dart';
 
 QuizBrain_A quizBrain = QuizBrain_A();
@@ -14,6 +13,7 @@ class HomePage_1 extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
+              alignment: Alignment.center,
               image: AssetImage('images/bgImg.jpg'),
               colorFilter: ColorFilter.mode(
                 Colors.grey.withOpacity(0.5),
@@ -28,12 +28,15 @@ class HomePage_1 extends StatelessWidget {
                 ' खंड अ : प्रसब  पूर्व जाँच',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 20,
                   color: Colors.brown.shade900,
                 ),
               ),
-              ElevatedButton(
-                onPressed: () {
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  ElevatedButton(onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -44,15 +47,18 @@ class HomePage_1 extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     primary: Colors.lightGreen.shade200,
                     //onPrimary: Colors.white,
-                    padding: EdgeInsets.all(15.0),
-                    elevation: 5.0,
+                    //padding: EdgeInsets.all(15.0),
+                    //elevation: 5.0,
                     textStyle:
                     const TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.red,)),
                 child: const Text('Start Quiz'),
               ),            ],
           ),
-        ),
+        ],
+    )
+
       ),
+      )
     );
   }
 }
