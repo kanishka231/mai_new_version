@@ -56,12 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisSpacing: 7,
             pattern: [
               QuiltedGridTile(2, 2),
-              QuiltedGridTile(1, 1),
-              QuiltedGridTile(1, 1),
-              QuiltedGridTile(1, 1),
-              QuiltedGridTile(1, 1),
-              QuiltedGridTile(1, 1),
-              QuiltedGridTile(1, 1),
+              QuiltedGridTile(2, 2),
+              QuiltedGridTile(2, 2),
+              QuiltedGridTile(2, 2),
+              QuiltedGridTile(2, 2),
+              QuiltedGridTile(2, 2),
+              QuiltedGridTile(2, 2),
               QuiltedGridTile(2, 2),
             ],
           ),
@@ -72,13 +72,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
+
                   children: <Widget>[
                     Text('INTRO Video',style: TextStyle(fontSize: 35,fontWeight: FontWeight. bold),
                     ),
 
                     Container(
-                      padding: EdgeInsets.fromLTRB(15,20,15,15),
+
+                      padding: EdgeInsets.fromLTRB(15,15,15,15),
+
                       child: ClipRRect(
+
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset('assets/images/imp_pics/1_intro_ss.jpg')),
                     ),
