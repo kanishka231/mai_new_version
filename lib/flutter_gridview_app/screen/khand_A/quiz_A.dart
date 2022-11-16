@@ -29,7 +29,7 @@ class HomePage_1 extends StatelessWidget {
                 ' खंड अ : प्रसब  पूर्व जाँच',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 25,
                   color: Colors.brown.shade900,
                 ),
               ),
