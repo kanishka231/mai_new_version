@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -81,8 +82,13 @@ class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
   int countCorrectAns = 0;
   int totalNoOfQuestions = quizBrain.getCountOfQuestions();
+  //WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
 
   void checkAnswer(BuildContext context, bool userAns) {
+    FirebaseFirestore.instance
+        .collection('data')
+        .add({'ans': userAns});
     setState(() {
       if (quizBrain.getAnswer() == userAns) {
         scoreKeeper.add(
