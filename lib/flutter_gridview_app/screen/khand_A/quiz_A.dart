@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+
 import 'quiz_brain_A.dart';
 
 QuizBrain_A quizBrain = QuizBrain_A();
@@ -14,7 +15,6 @@ class HomePage_1 extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
-              alignment: Alignment.center,
               image: AssetImage('images/bgImg.jpg'),
               colorFilter: ColorFilter.mode(
                 Colors.grey.withOpacity(0.5),
@@ -23,25 +23,18 @@ class HomePage_1 extends StatelessWidget {
             ),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Text(
                 ' खंड अ : प्रसब  पूर्व जाँच',
-                textAlign: TextAlign.center,
+                //textAlign: TextAlign.right,
                 style: TextStyle(
-<<<<<<< HEAD
-                  fontSize: 20,
-=======
                   fontSize: 25,
->>>>>>> b0ebd9b537ced5395ef5b96249b8b0ab46c00352
                   color: Colors.brown.shade900,
                 ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  ElevatedButton(onPressed: () {
+              ElevatedButton(
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -52,18 +45,15 @@ class HomePage_1 extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     primary: Colors.lightGreen.shade200,
                     //onPrimary: Colors.white,
-                    //padding: EdgeInsets.all(15.0),
-                    //elevation: 5.0,
+                    padding: EdgeInsets.all(15.0),
+                    elevation: 5.0,
                     textStyle:
                     const TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.red,)),
                 child: const Text('Start Quiz'),
               ),            ],
           ),
-        ],
-    )
-
+        ),
       ),
-      )
     );
   }
 }
@@ -219,9 +209,9 @@ class _QuizPageState extends State<QuizPage> {
             child: ElevatedButton(
               onPressed: () {
                 checkAnswer(context, false);
-                },
+              },
               style: ElevatedButton.styleFrom(
-                primary: Colors.red,
+                  primary: Colors.red,
                   padding:
                   const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                   textStyle:
