@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             color: Color(0xFF5E7A86),
             child: VideoItems_C(
-            videoPlayerController: VideoPlayerController.asset('assets/videos/intro.mp4',
+            videoPlayerController: VideoPlayerController.asset('assets/videos/breast_feeding.mp4',
             ),
             looping: true,
             autoplay: false,

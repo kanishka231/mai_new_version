@@ -50,7 +50,7 @@ class _khand_BState extends State<khand_B> {
                     //color: Color(0x6E2BFF3D),
                     child: VideoItems_B(
                       videoPlayerController: VideoPlayerController.asset(
-                        'assets/videos/intro.mp4',
+                        'assets/videos/breast_feeding.mp4',
                       ),
                       looping: true,
                       autoplay: false,
