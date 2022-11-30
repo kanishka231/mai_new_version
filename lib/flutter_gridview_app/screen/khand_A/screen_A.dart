@@ -8,7 +8,6 @@ import 'audio_A.dart';
 
 class khand_A extends StatefulWidget {
   khand_A({Key? key}) : super(key: key);
-
   @override
   _khand_AState createState() => _khand_AState();
 }
@@ -17,63 +16,109 @@ class _khand_AState extends State<khand_A> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Khand A"),
+          title: Text(
+            "ए एन सी जांच",
+            textAlign: TextAlign.center,
+          ),
         ),
         body: ListView(
           children: [
             Card(
-              color: Color(0xFF458D75),
+              color: Color(0xFFEC407A),
               semanticContainer: true,
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: Column(
                 children: <Widget>[
-                  Text(
-                    'Image',
-                    style: TextStyle(fontSize:30,color: Colors.white),
+                  Padding(padding: EdgeInsets.all(16.0)),
+                  FloatingActionButton.extended(
+                    label: Text(
+                      'चित्र',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ), // <-- Text
+                    //backgroundColor: Colors.black,
+                    icon: Icon(
+                      // <-- Icon
+                      Icons.photo,
+                      size: 24.0,
+                    ),
+                    onPressed: () {},
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     //color: Color(0x6E2B70FF),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child: Image.asset('assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
+                        child: Image.asset(
+                            'assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
                   ),
-                  Text(
-                    'Video',
-                    style: TextStyle(fontSize: 30,color: Colors.white),
+                  FloatingActionButton.extended(
+                    label: Text(
+                      'वीडियो',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ), // <-- Text
+                    //backgroundColor: Colors.black,
+                    icon: Icon(
+                      // <-- Icon
+                      Icons.video_call_outlined,
+                      size: 24.0,
+                    ),
+                    onPressed: () {},
                   ),
-
                   Container(
                     //padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 400,
-                    width: 400,
-                      //color: Color(0x6E2BFF3D),
+                    //width: 400,
+                    //color: Color(0x6E2BFF3D),
                     child: VideoItems(
                       videoPlayerController: VideoPlayerController.asset(
-                        'assets/videos/intro.mp4',
+                        'assets/videos/childcare.mp4',
                       ),
                       looping: true,
                       autoplay: false,
                     ),
                   ),
-                  Text(
-                    'Audio',
-                    style: TextStyle(fontSize: 30,color:Colors.white),
+                  FloatingActionButton.extended(
+                    label: Text(
+                      'ध्वनि',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ), // <-- Text
+                    //backgroundColor: Colors.black,
+                    icon: Icon(
+                      // <-- Icon
+                      Icons.headphones_rounded,
+                      size: 24.0,
+                    ),
+                    onPressed: () {},
                   ),
+                  //add default icon
+
+                  //resize and add color to icon
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 250,
                     width: 400,
                     //color: Color(0x6E2B70FF),
                     child: Audio_A(),
+                  ),
+                  FloatingActionButton.extended(
+                    label: Text(
+                      'चर्चा करें',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ), // <-- Text
+                    //backgroundColor: Colors.black,
+                    icon: Icon(
+                      // <-- Icon
+                      Icons.question_mark,
+                      size: 24.0,
                     ),
+                    onPressed: () {},
+                  ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
                     height: 300,
                     width: 400,
                     //color: Color(0x6E2B70FF),
                     child: HomePage_1(),
-
                   ),
                 ],
               ),

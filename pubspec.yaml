@@ -73,6 +73,14 @@ flutter:
     - assets/videos/
     - assets/audio/KHAND A(complete audio).mp3
     - assets/audio/
+    - assets/videos/lowBirth.mp4
+    - assets/videos/MotherCare.mp4
+    - assets/videos/BreastFeeding.mp4
+    - assets/videos/Appeal.mp4
+    - assets/videos/vaccination.mp4
+    - assets/videos/anc.mp4
+    - assets/videos/childcare.mp4
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

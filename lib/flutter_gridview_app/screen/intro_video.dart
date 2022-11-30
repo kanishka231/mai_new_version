@@ -10,7 +10,7 @@ class video_intro extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Text(
-            'Video',
+            'वीडियो',
             style: TextStyle(fontSize: 30,color: Colors.white),
           ),
           Container(

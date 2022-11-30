@@ -5,18 +5,15 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:mai/flutter_gridview_app/screen/appeal_video.dart';
 import 'package:mai/flutter_gridview_app/screen/intro_video.dart';
 import 'package:mai/flutter_gridview_app/screen/menu_bar.dart';
-
 import 'khand_A/screen_A.dart';
 import 'khand_B/screen_B.dart';
 import 'khand_C/screen_C.dart';
 import 'khand_D/screen_D.dart';
 import 'khand_E/screen_E.dart';
 import 'khand_F/screen_F.dart';
-
 void main() {
   runApp(HomeScreen());
 }
-
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -47,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //drawer: new AppDrawer(), // left side
         endDrawer: new AppDrawer(), // right side
         appBar: AppBar(
-          title: Text("Maai"),
+          title: Text("माई"),
         ),
         body: GridView(
           gridDelegate: SliverQuiltedGridDelegate(
@@ -72,20 +69,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
-
                   children: <Widget>[
-                    Text('स्वागत',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),
+                    Text('परिचय',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),
                     ),
-
                     Container(
-
                       padding: EdgeInsets.fromLTRB(15,15,15,15),
-
                       child: ClipRRect(
-
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/1_intro_ss.jpg')),
+                          child: Image.asset('assets/images/imp_pics/1_intro_ss.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
+
                   ],
                 ),
                 shape: RoundedRectangleBorder(
@@ -105,18 +98,19 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             GestureDetector (
               child: Card(
-                color: Color(0xFF91D72C),
+                color: Color(0xFFEC407A),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड A',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('1.ए एन सी जांच',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
+                          child: Image.asset('assets/images/imp_pics/2_sarkaari_ss_1.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
+
                   ],
                 ),
                 shape: RoundedRectangleBorder(
@@ -134,22 +128,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
-
-
             GestureDetector (
               child:
               Card(
-                color: Color(0xFFFD7F00),
+                color: Color(0xFF0097A7),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड B',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('2.स्तनपान',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/4_maa_ka_dudh.jpg')),
+                          child: Image.asset('assets/images/imp_pics/4_maa_ka_dudh.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
                   ],
                 ),
@@ -171,17 +163,17 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xFFC559C7),
+                color: Color(0xFF1565C0),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड C',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('3.बच्चे की देखभाल',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/5_navjaat_dekhbhal.jpg')),
+                          child: Image.asset('assets/images/imp_pics/5_navjaat_dekhbhal.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
                   ],
                 ),
@@ -203,17 +195,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
             GestureDetector (
               child: Card(
-                color: Color(0xFFE7C32C),
+                color: Color(0xFF7E57C2),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड D',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('4.माँ की देखभाल',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/6_maa_ki_dekhbhal.jpg')),
+                          child: Image.asset('assets/images/imp_pics/6_maa_ki_dekhbhal.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
                   ],
                 ),
@@ -235,17 +227,17 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xDF1FE5B1),
+                color: Color(0xFF00838F),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड E',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('5.कम वजन वाले बच्चे',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/7_kam_wajan_waale_bachhe.jpg')),
+                          child: Image.asset('assets/images/imp_pics/7_kam_wajan_waale_bachhe.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
                   ],
                 ),
@@ -267,17 +259,17 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xFF7B5D9F),
+                color: Color(0xFFE57373),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('खंड F',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('6.टीकाकरण',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/8_tikaakaran.jpg')),
+                          child: Image.asset('assets/images/imp_pics/8_tikaakaran.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
 
                   ],
@@ -301,17 +293,17 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector (
               child:
               Card(
-                color: Color(0xFFDE0759),
+                color: Color(0xFFFF8A65),
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: <Widget>[
-                    Text('Appeal Video',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
+                    Text('अपील',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight. bold),),
                     Container(
                       padding: EdgeInsets.fromLTRB(15,20,15,15),
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset('assets/images/imp_pics/9_nivedan.jpg')),
+                          child: Image.asset('assets/images/imp_pics/9_nivedan.jpg',height: 250,fit: BoxFit.fitHeight,)),
                     ),
 
                   ],

@@ -10,13 +10,13 @@ class appeal_video extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Text(
-            'Video',
+            'वीडियो',
             style: TextStyle(fontSize: 30,color: Colors.white),
           ),
           Container(
             color: Color(0xFF5E7A86),
             child: VideoItems(
-              videoPlayerController: VideoPlayerController.asset('assets/videos/intro.mp4',),
+              videoPlayerController: VideoPlayerController.asset('assets/videos/Appeal.mp4',),
               looping: true,
               autoplay: false,
             ),

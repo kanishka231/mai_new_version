@@ -28,7 +28,7 @@ class _khand_FState extends State<khand_F> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    'Image',
+                    'चित्र',
                     style: TextStyle(fontSize:30,color: Colors.white),
                   ),
                   Container(
@@ -39,7 +39,7 @@ class _khand_FState extends State<khand_F> {
                         child: Image.asset('assets/images/imp_pics/8_tikaakaran.jpg')),
                   ),
                   Text(
-                    'Video',
+                    'वीडियो',
                     style: TextStyle(fontSize: 30,color: Colors.white),
                   ),
 
@@ -50,7 +50,7 @@ class _khand_FState extends State<khand_F> {
                     //color: Color(0x6E2BFF3D),
                     child: VideoItems_F(
                       videoPlayerController: VideoPlayerController.asset(
-                        'assets/videos/intro.mp4',
+                        'assets/videos/vaccination.mp4',
                       ),
                       looping: true,
                       autoplay: false,
