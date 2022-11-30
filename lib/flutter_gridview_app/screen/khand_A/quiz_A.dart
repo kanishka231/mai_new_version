@@ -55,12 +55,7 @@ class _QuizPageState extends State<QuizPage> {
       }
       if (quizBrain.isFinished()) {
         if (countCorrectAns >= totalNoOfQuestions / 2) {
-          Container(
-            child: Text(" कुल अंक: $countCorrectAns/$totalNoOfQuestions "
 
-            ),
-
-          )
           Alert(
             closeFunction: () => Navigator.pop(context),
             context: context,
@@ -77,7 +72,7 @@ class _QuizPageState extends State<QuizPage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Quiz(),
+                      builder: (context) =>khand_A(),
                     ),
                   );
                 },
@@ -87,7 +82,7 @@ class _QuizPageState extends State<QuizPage> {
           ).show();
         } else {
           Alert(
-            closeFunction: () => Navigator.pop(context),
+            //closeFunction: () => Navigator.pop(context),
             context: context,
             type: AlertType.error,
             title: "असफल",
