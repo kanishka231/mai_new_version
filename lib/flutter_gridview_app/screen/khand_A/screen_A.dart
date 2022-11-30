@@ -5,7 +5,7 @@ import 'package:mai/flutter_gridview_app/screen/khand_A/quiz_A.dart';
 import 'package:video_player/video_player.dart';
 import '../../../video.dart';
 import 'audio_A.dart';
-
+import 'quiz_brain_A.dart';
 class khand_A extends StatefulWidget {
   khand_A({Key? key}) : super(key: key);
   @override
@@ -51,6 +51,7 @@ class _khand_AState extends State<khand_A> {
                         child: Image.asset(
                             'assets/images/imp_pics/2_sarkaari_ss_1.jpg')),
                   ),
+                  Padding(padding: EdgeInsets.all(16.0)),
                   FloatingActionButton.extended(
                     label: Text(
                       'वीडियो',
@@ -90,43 +91,49 @@ class _khand_AState extends State<khand_A> {
                     ),
                     onPressed: () {},
                   ),
+                  Padding(padding: EdgeInsets.all(16.0)),
                   //add default icon
-
                   //resize and add color to icon
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
-                    height: 250,
+                    height: 200,
                     width: 400,
                     //color: Color(0x6E2B70FF),
+                    //color: Colors.pinkAccent,
                     child: Audio_A(),
                   ),
-                  FloatingActionButton.extended(
-                    label: Text(
-                      'चर्चा करें',
-                      style: TextStyle(fontSize: 30, color: Colors.white),
-                    ), // <-- Text
-                    //backgroundColor: Colors.black,
-                    icon: Icon(
-                      // <-- Icon
-                      Icons.question_mark,
-                      size: 24.0,
-                    ),
-                    onPressed: () {},
-                  ),
+                  Padding(padding: EdgeInsets.all(16.0)),
                   Container(
-                    padding: EdgeInsets.fromLTRB(15, 20, 15, 15),
-                    height: 300,
-                    width: 400,
-                    //color: Color(0x6E2B70FF),
-                    child: HomePage_1(),
+                    padding: EdgeInsets.all(16.0),
+                    height: 100,
+                    width: 340,
+                    color: Colors.white,
+                    child: FloatingActionButton.extended(
+                      label: Text(
+                        'स्वाल जवाब',
+                        style: TextStyle(fontSize: 40, color: Colors.white),
+                      ), // <-- Text
+                      //backgroundColor: Colors.black,
+                      icon: Icon(
+                        // <-- Icon
+                        Icons.quiz_outlined,
+                        size: 40.0,
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Quiz(),
+                          ),
+                        );
+                      },
+                    ),
                   ),
+                  Padding(padding: EdgeInsets.all(16.0)),
+
                 ],
               ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(5),
+
             ),
           ],
           padding: EdgeInsets.all(10),

@@ -96,6 +96,7 @@ class _Audio_AState extends State<Audio_A> {
                     )
                 ),
                 Container(
+
                   child: Wrap(
                     spacing: 10,
                     children: [
@@ -133,7 +134,7 @@ class _Audio_AState extends State<Audio_A> {
                             }
                           },
                           icon: Icon(isplaying?Icons.pause:Icons.play_arrow),
-                          label:Text(isplaying?"Pause":"Play")
+                          label:Text(isplaying?"रोके":"शुरू करें")
                       ),
                       ElevatedButton.icon(
                           onPressed: () async {
@@ -149,7 +150,7 @@ class _Audio_AState extends State<Audio_A> {
                             }
                           },
                           icon: Icon(Icons.stop),
-                          label:Text("Stop")
+                          label:Text("रोके")
                       ),
                     ],
                   ),
