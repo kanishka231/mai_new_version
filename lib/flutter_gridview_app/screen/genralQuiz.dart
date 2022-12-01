@@ -12,7 +12,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   bool falseUserAnswer = false;
   bool trueUserAnswer = true;
   void nextQuestion() {
-    if(index < questions.length -1) {
+    if(index < questions.length-1) {
       index++;
       setState(() {});
     } else {
@@ -20,6 +20,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
     }
   }
+
   Future<void> showresult() async {
     return await showDialog(
         barrierDismissible: false,
@@ -27,14 +28,15 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         builder: (ctx) {
           return AlertDialog(
             //title: const Text('Thank You'),
-            content: Text('COMPLETED'),
+            content: Text('समाप्त',style: TextStyle(fontWeight: FontWeight.bold,
+                fontSize: 32),),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(ctx).pop();
                   Navigator.of(context).pop();
                 },
-                child: const Text('vpis jaaye',style: TextStyle(fontWeight: FontWeight.bold,
+                child: const Text('धन्यवाद',style: TextStyle(fontWeight: FontWeight.bold,
                     fontSize: 32),),
               ),
             ],
@@ -46,7 +48,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   Widget build(BuildContext context) {
     final Question question = questions[index];
     return Scaffold(
-      appBar: AppBar(title: Text('Question Number: ${index + 1} / ${questions.length}'),),
+      appBar: AppBar(title: Text('प्रश्न संख्या : ${index + 1} / ${questions.length}'),),
       body: Container(
         height: MediaQuery.of(context).size.height * 1,
         margin: const EdgeInsets.all(15),
@@ -54,10 +56,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             //Text('Question numéro: ', style: const TextStyle(fontSize: 20, fontStyle: FontStyle.italic)),
-            Text(question.title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),),
+            Text(question.title, style: const TextStyle(fontSize:35, fontWeight: FontWeight.bold),),
             SizedBox(
-              height: 350,
-              width: 350,
               child: Image.asset(
                 question.image,
                 //fit: BoxFit.cover,
@@ -74,7 +74,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       //showAnswer(question.answer);
                       nextQuestion();
                     },
-                    child: const Text('A',style: TextStyle(fontSize:22,fontWeight: FontWeight.bold,
+                    child: const Text('बाएं',style: TextStyle(fontSize:22,fontWeight: FontWeight.bold,
                         color: Colors.white),),
 
                   ),
@@ -89,7 +89,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       //showAnswer(question.answer);
                       nextQuestion();
                     },
-                    child: const Text('B',style: TextStyle(fontSize:22,fontWeight: FontWeight.bold,
+                    child: const Text('दांए',style: TextStyle(fontSize:22,fontWeight: FontWeight.bold,
                         color: Colors.white),),
                   ),
                 ),

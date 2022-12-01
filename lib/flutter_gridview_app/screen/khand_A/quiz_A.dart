@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:mai/flutter_gridview_app/screen/HomeScreen.dart';
 import 'package:mai/flutter_gridview_app/screen/khand_A/screen_A.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'quiz_brain_A.dart';
 
 QuizBrain_A quizBrain = QuizBrain_A();
-
 class Quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -54,59 +54,10 @@ class _QuizPageState extends State<QuizPage> {
         );
       }
       if (quizBrain.isFinished()) {
-        if (countCorrectAns >= totalNoOfQuestions / 2) {
-
-          Alert(
-            closeFunction: () => Navigator.pop(context),
-            context: context,
-            type: AlertType.success,
-            title: "सफल",
-            desc: " कुल अंक: $countCorrectAns/$totalNoOfQuestions ",
-            buttons: [
-              DialogButton(
-                child: Text(
-                  "समाप्त",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>khand_A(),
-                    ),
-                  );
-                },
-                width: 200,
-              )
-            ],
-          ).show();
+        if (countCorrectAns == totalNoOfQuestions ) {
+          showresult1();
         } else {
-          Alert(
-            //closeFunction: () => Navigator.pop(context),
-            context: context,
-            type: AlertType.error,
-            title: "असफल",
-            desc: "कुल अंक: $countCorrectAns/$totalNoOfQuestions ",
-            buttons: [
-
-              DialogButton(
-                child: Text(
-                  "पुनः प्रयास करें",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Quiz(),
-                    ),
-                  );
-                },
-                width: 200,
-              )
-
-            ],
-          ).show();
+          showresult();
         }
         quizBrain.reset();
         scoreKeeper.clear();
@@ -115,6 +66,56 @@ class _QuizPageState extends State<QuizPage> {
         quizBrain.nextQuestion();
       }
     });
+  }
+
+  Future<void> showresult1() async {
+    return await showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (ctx) {
+          return AlertDialog(
+            //title: const Text('Thank You'),
+            content: Text('समाप्त',style: TextStyle(fontWeight: FontWeight.bold,
+                fontSize: 32),),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(ctx).pop();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyHomePage(),
+                    ),
+                  );
+                },
+                child: const Text('बहुत बढ़िया',style: TextStyle(fontWeight: FontWeight.bold,
+                    fontSize: 32),),
+              ),
+            ],
+          );
+        });
+  }
+  Future<void> showresult() async {
+    return await showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (ctx) {
+          return AlertDialog(
+            //title: const Text('Thank You'),
+            content: Text('समाप्त',style: TextStyle(fontWeight: FontWeight.bold,
+                fontSize: 32)),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(ctx).pop();
+                  Navigator.of(context).pop();
+                },
+                child: const Text('पुनः प्रयास करें',style: TextStyle(fontWeight: FontWeight.bold,
+                    fontSize: 32),),
+              ),
+            ],
+          );
+        });
   }
 
   @override

@@ -11,21 +11,19 @@ class Question {
 class QuestionData {
   List<Question> questions = [
     Question(
-      title: 'kacha ghr yah pkaa ghr',
+      title: 'कच्चा घर या फिर पक्का घर ?',
       image: 'assets/images/genralQuiz/house.jpg',
     ),
     Question(
-      title: 'ek bccha yeh ek se jyda',
+      title: 'एक बच्चा यह फिर एक से ज्यादा ?',
       image: 'assets/images/genralQuiz/childrens.jpg',
-
     ),
     Question(
-      title: 'kitne pde likhe ho',
+      title: 'शिक्षित या अशिक्षित ?',
       image: 'assets/images/genralQuiz/eduction.jpg',
-
     ),
     Question(
-      title: 'pehli baar maa yah ',
+      title: 'आप किस आयु वर्ग के हैं ?',
       image: 'assets/images/genralQuiz/age.jpg',
     ),
 
