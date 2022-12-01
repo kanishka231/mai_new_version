@@ -60,7 +60,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               width: 350,
               child: Image.asset(
                 question.image,
-                fit: BoxFit.cover,
+                //fit: BoxFit.cover,
               ),
             ),
             Row(
@@ -74,10 +74,12 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       //showAnswer(question.answer);
                       nextQuestion();
                     },
-                    child: const Text('A'),
+                    child: const Text('A',style: TextStyle(fontSize:22,fontWeight: FontWeight.bold,
+                        color: Colors.white),),
 
                   ),
                 ),
+                //Padding(padding: EdgeInsets.only(right:)),
                 SizedBox(
                   height: 60,
                   width: 180,
@@ -87,7 +89,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       //showAnswer(question.answer);
                       nextQuestion();
                     },
-                    child: const Text('B',style: TextStyle(fontSize:12,fontWeight: FontWeight.bold,
+                    child: const Text('B',style: TextStyle(fontSize:22,fontWeight: FontWeight.bold,
                         color: Colors.white),),
                   ),
                 ),

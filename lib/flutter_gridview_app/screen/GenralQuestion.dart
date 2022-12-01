@@ -13,7 +13,6 @@ class QuestionData {
     Question(
       title: 'kacha ghr yah pkaa ghr',
       image: 'assets/images/genralQuiz/house.jpg',
-
     ),
     Question(
       title: 'ek bccha yeh ek se jyda',
