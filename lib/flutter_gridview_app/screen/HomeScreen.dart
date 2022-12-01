@@ -11,6 +11,7 @@ import 'khand_C/screen_C.dart';
 import 'khand_D/screen_D.dart';
 import 'khand_E/screen_E.dart';
 import 'khand_F/screen_F.dart';
+import 'genralQuiz.dart';
 void main() {
   runApp(HomeScreen());
 }
@@ -46,23 +47,34 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("माई"),
         ),
-        body: GridView(
-          gridDelegate: SliverQuiltedGridDelegate(
-            crossAxisCount: 2,
-            crossAxisSpacing: 5,
-            mainAxisSpacing: 7,
-            pattern: [
-              QuiltedGridTile(2, 2),
-              QuiltedGridTile(2, 2),
-              QuiltedGridTile(2, 2),
-              QuiltedGridTile(2, 2),
-              QuiltedGridTile(2, 2),
-              QuiltedGridTile(2, 2),
-              QuiltedGridTile(2, 2),
-              QuiltedGridTile(2, 2),
-            ],
-          ),
+        body: ListView(
           children: [
+            Container(
+              padding: EdgeInsets.all(16.0),
+              height: 100,
+              width: 340,
+              color: Colors.white,
+              child: FloatingActionButton.extended(
+                label: Text(
+                  'सामान्य जानकारी भरें',
+                  style: TextStyle(fontSize: 30, color: Colors.white),
+                ), // <-- Text
+                //backgroundColor: Colors.black,
+                icon: Icon(
+                  // <-- Icon
+                  Icons.quiz_outlined,
+                  size: 40.0,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuestionsScreen(),
+                    ),
+                  );
+                },
+              ),
+            ),
             GestureDetector (
               child: Card(
                 color: Colors.teal,
@@ -95,6 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
+
             ),
             GestureDetector (
               child: Card(

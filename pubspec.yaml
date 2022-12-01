@@ -1,10 +1,8 @@
 name: mai
 description: A new project
-
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
 # followed by an optional build number separated by a +.
@@ -86,6 +84,11 @@ flutter:
     - assets/videos/vaccination.mp4
     - assets/videos/anc.mp4
     - assets/videos/childcare.mp4
+    - assets/images/genralQuiz/age.jpg
+    - assets/images/genralQuiz/childrens.jpg
+    - assets/images/genralQuiz/eduction.jpg
+    - assets/images/genralQuiz/house.jpg
+
 
   #   - images/a_dot_ham.jpeg
 
